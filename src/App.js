@@ -5,14 +5,12 @@ import './App.css';
 
 const languages = {
 	en: { nativeName: 'English' },
+	ko: { nativeName: 'Korean' },
 	de: { nativeName: 'Deutsch' }
 };
 
 function App() {
 	const { t, i18n } = useTranslation();
-
-	document.documentElement.dir = i18n.dir();
-
 
 	return (
 		<div className="App">
@@ -25,6 +23,7 @@ function App() {
 						onClick={() => {
 							i18n.changeLanguage(lng);
 							document.documentElement.lang = i18n.language;
+							document.documentElement.dir = i18n.dir();
 						}
 					}>
 						{languages[lng].nativeName}

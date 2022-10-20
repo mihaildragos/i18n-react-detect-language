@@ -16,6 +16,13 @@ const i18nTranslations = {
                 text1: 'GERMAN content'
             }
         }
+    },
+    ko: {
+        translation: {
+            description: {
+                text1: '광고 관리자'
+            }
+        }
     }
 }
 
